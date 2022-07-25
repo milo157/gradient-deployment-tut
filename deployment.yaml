@@ -1,0 +1,12 @@
+image: tiangolo/uvicorn-gunicorn-fastapi
+port: 8000
+command:
+  - /bin/sh
+  - '-c'
+  - |
+    cd /opt/repos/repo
+    pip install -r requirements.txt
+    python app.py
+resources:
+  replicas: 1
+  instanceType: C5

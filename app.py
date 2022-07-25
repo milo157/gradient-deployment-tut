@@ -1,6 +1,4 @@
 import pandas as pd
-from requests import request
-import xgboost as xgb
 import joblib
 
 from fastapi import FastAPI, Request
