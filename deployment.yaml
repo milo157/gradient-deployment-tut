@@ -1,4 +1,4 @@
-image: tiangolo/uvicorn-gunicorn-fastapi
+image: python:3.8-slim-buster
 port: 8000
 command:
   - /bin/sh
@@ -7,6 +7,15 @@ command:
     cd /opt/repos/repo
     pip install -r requirements.txt
     python app.py
+repositories:
+  dataset: dss41xj87hs93ik
+  mountPath: /opt/repos
+  repositories:
+    - url: https://github.com/CerebriumAI/gradient-deployment-tut
+      name: repo
+      ref: master
+      username: elijah-rou # optionally, the username to authenticate to the repo with
+      password: secret:github_password # optionally, the Gradient Secret containing the password for your Git user
 resources:
   replicas: 1
   instanceType: C4
