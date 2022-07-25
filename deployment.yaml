@@ -9,4 +9,4 @@ command:
     python app.py
 resources:
   replicas: 1
-  instanceType: C5
+  instanceType: C4
