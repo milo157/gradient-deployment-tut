@@ -1,4 +1,4 @@
-image: python:3.8-slim-buster
+image: python:3.8-slim-bullseye
 port: 8000
 command:
   - /bin/sh
@@ -14,8 +14,6 @@ repositories:
     - url: https://github.com/CerebriumAI/gradient-deployment-tut
       name: repo
       ref: master
-      username: elijah-rou # optionally, the username to authenticate to the repo with
-      password: secret:github_password # optionally, the Gradient Secret containing the password for your Git user
 resources:
   replicas: 1
-  instanceType: C4
+  instanceType: C5
