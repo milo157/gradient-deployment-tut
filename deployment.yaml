@@ -1,4 +1,4 @@
-image: python:3.8-slim-bullseye
+image: python:3.8-bullseye
 port: 8000
 command:
   - /bin/sh
@@ -7,13 +7,7 @@ command:
     cd /opt/repos/repo
     pip install -r requirements.txt
     python app.py
-repositories:
-  dataset: dss41xj87hs93ik
-  mountPath: /opt/repos
-  repositories:
-    - url: https://github.com/CerebriumAI/gradient-deployment-tut
-      name: repo
-      ref: master
+
 resources:
   replicas: 1
   instanceType: C5
