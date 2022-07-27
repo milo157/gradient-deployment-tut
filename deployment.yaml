@@ -7,7 +7,13 @@ command:
     cd /opt/repos/repo
     pip install -r requirements.txt
     python app.py
-
+repositories:
+  dataset: ds4hesxveqsxk3v
+  mountPath: /opt/repos
+  repositories:
+    - url: https://github.com/CerebriumAI/gradient-deployment-tut
+      name: repo
+      ref: master
 resources:
   replicas: 1
   instanceType: C5
