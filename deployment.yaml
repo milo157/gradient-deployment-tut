@@ -8,10 +8,10 @@ command:
     pip install -r requirements.txt
     python app.py
 repositories:
-  dataset: ds4hesxveqsxk3v
+  dataset: dsqs9eobxeojxu1
   mountPath: /opt/repos
   repositories:
-    - url: https://github.com/CerebriumAI/gradient-deployment-tut
+    - url: https://github.com/milo157/gradient-deployment-tut.git
       name: repo
       ref: master
 resources:
